@@ -46,11 +46,11 @@ public class Converter {
         System.out.println();
 
         boolean[] array = convertImage(imagePath);
-        if (array[0]) {System.out.print("{#FFFFFF, ");} else {System.out.print("{#000000, ");}
+        if (array[0]) {System.out.print("{0x3f, ");} else {System.out.print("{0x00, ");}
 
         System.out.print("{");
         for (int i = 0; i < 128 * 64; i++) {
-            if (array[i]) {System.out.print("#FFFFFF");} else {System.out.print("#000000");}
+            if (array[i]) {System.out.print("0x3f");} else {System.out.print("0x00");}
 
             if (i < 128 * 64 - 1) {System.out.print(", ");}
         }
